@@ -1,0 +1,115 @@
+/* ============================================================
+   PAGE CONTAINER - Side-by-Side Layout
+   ============================================================ */
+.products-page {
+  display: flex !important;
+  flex-direction: row !important; /* Forces Sidebar left, Grid right */
+  gap: 30px !important;
+  padding: 30px !important;
+  background: #faf7f2 !important;
+  min-height: 100vh;
+  align-items: flex-start !important;
+}
+
+/* ============================================================
+   SIDEBAR - The Left Column
+   ============================================================ */
+.sidebar {
+  width: 280px !important;
+  min-width: 280px !important; /* Prevents it from disappearing */
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px !important;
+  position: sticky !important;
+  top: 20px;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.category-filter-bar {
+  background: white !important;
+  padding: 20px !important;
+  border-radius: 15px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05) !important;
+}
+
+/* Restore Category Button Pill Shapes */
+.filter-btn {
+  width: 100% !important;
+  padding: 12px 20px !important;
+  border-radius: 40px !important; 
+  border: 1px solid #eee !important;
+  background: white !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  color: #444 !important;
+  cursor: pointer !important;
+}
+
+/* Brown-Gold Active State */
+.filter-btn.active, 
+.filter-btn:hover {
+  background: #a67c52 !important; 
+  color: white !important;
+  border-color: #a67c52 !important;
+}
+
+/* ============================================================
+   PRODUCT GRID - The Right Column
+   ============================================================ */
+.products-container {
+  flex: 1 !important; /* Fills remaining space */
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 30px !important;
+}
+
+.product-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 20px !important;
+}
+
+.product-card {
+  background: white !important;
+  padding: 15px !important;
+  border-radius: 15px !important;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05) !important;
+  text-align: center !important;
+}
+
+.product-card img {
+  width: 100% !important;
+  height: 250px !important;
+  object-fit: cover !important;
+  border-radius: 10px !important;
+}
+
+/* ============================================================
+   TYPE SECTION (MENS, WOMENS)
+   ============================================================ */
+.type-filter-wrapper {
+  margin-top: 10px !important;
+}
+
+.type-chips {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+}
+
+.type-chip {
+  padding: 8px 15px !important;
+  border-radius: 20px !important;
+  border: 1px solid #ddd !important;
+  font-size: 11px !important;
+  background: white !important;
+}
+
+.type-chip.active {
+  background: #a67c52 !important;
+  color: white !important;
+}

@@ -1,0 +1,72 @@
+/* ================= HOME WRAPPER ================= */
+.home-page {
+  position: relative;
+}
+
+/* ================= HERO SECTION ================= */
+.hero-section {
+  position: relative;
+  height: 85vh;
+
+  background: url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9")
+    center/cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* LIGHT OVERLAY */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.4);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  z-index: 1;
+}
+
+/* CONTENT ABOVE OVERLAY */
+.hero-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ================= PRODUCTS SECTION ================= */
+#products {
+  background: #fff;
+}
+
+/* ================= DARK MODE FIX ================= */
+
+/* FULL PAGE BACKGROUND */
+body.dark-mode .home-page {
+  background: #121212 !important;
+  min-height: 100vh;
+  color: #eaeaea;
+}
+
+/* HERO DARK OVERLAY */
+body.dark-mode .hero-section::before {
+  background: rgba(0, 0, 0, 0.85) !important;
+}
+
+/* PRODUCTS DARK */
+body.dark-mode #products {
+  background: #121212 !important;
+}
+
+/* GLOBAL DARK TEXT */
+body.dark-mode {
+  color: #eaeaea;
+}
+
+/* ================= SMOOTH TRANSITION ================= */
+body {
+  transition: background 0.4s ease, color 0.4s ease;
+}

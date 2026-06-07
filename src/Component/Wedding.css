@@ -1,0 +1,74 @@
+
+/* PAGE */
+.wedding-page {
+  font-family: "Playfair Display", serif;
+  padding: 40px;
+}
+
+/* HEADER */
+.wedding-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.wedding-header h1 {
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+
+.wedding-header p {
+  color: #777;
+  margin-top: 10px;
+}
+
+/* CATEGORY SECTION */
+.category-section {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* CARD */
+.category-card {
+  width: 300px;
+  height: 380px;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+/* IMAGE */
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* OVERLAY */
+.category-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* TEXT */
+.category-card h2 {
+  color: white;
+  font-size: 28px;
+  letter-spacing: 2px;
+}
+
+/* HOVER EFFECT */
+.category-card:hover {
+  transform: scale(1.05);
+}
+
+.category-card:hover img {
+  transform: scale(1.1);
+  transition: 0.4s;
+}

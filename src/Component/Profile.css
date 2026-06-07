@@ -1,0 +1,337 @@
+/* ================= MAIN LAYOUT ================= */
+.profile-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f5f5f5, #eaeaea);
+}
+
+/* ================= SIDEBAR ================= */
+.profile-sidebar {
+  width: 270px;
+  background: #111;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 5px 0 20px rgba(0,0,0,0.2);
+}
+
+.profile-sidebar h3 {
+  margin-top: 12px;
+}
+
+.profile-sidebar p {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.profile-sidebar button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  border: none;
+  background: linear-gradient(45deg, #b48a3c, #d1a84f);
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.profile-sidebar button:hover {
+  transform: scale(1.03);
+}
+
+/* ================= AVATAR ================= */
+.avatar-box {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  margin: auto;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #b48a3c;
+}
+
+.edit-icon {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  background: #000;
+  color: white;
+  padding: 7px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.2s;
+}
+
+.edit-icon:hover {
+  transform: scale(1.1);
+  background: #b48a3c;
+}
+
+/* ================= CONTENT ================= */
+.profile-content {
+  flex: 1;
+  padding: 40px;
+}
+
+/* ================= DASH CARDS ================= */
+.dashboard-cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.dash-card {
+  flex: 1;
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.dash-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* ================= DETAILS & ADDRESS ================= */
+.details-card,
+.address-section {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* ================= ADDRESS CARD ================= */
+.address-card {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.address-card:hover {
+  background: #eee;
+}
+
+/* ADDRESS ACTION BUTTONS */
+.addr-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.addr-actions button {
+  padding: 6px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  background: black;
+  color: white;
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+.addr-actions button:hover {
+  background: #b48a3c;
+}
+
+/* ================= ADD BUTTON ================= */
+.address-section button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ================= MODAL ================= */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 320px;
+}
+
+.modal input {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.modal-actions button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 6px;
+}
+
+/* ================= DRAWER (AMAZON STYLE) ================= */
+/* .drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 999;
+}
+
+.drawer {
+  width: 420px;
+  height: 100%;
+  background: white;
+  animation: slideIn 0.3s ease;
+  box-shadow: -10px 0 30px rgba(0,0,0,0.2);
+  overflow-y: auto;
+  padding: 20px;
+} */
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .profile-container {
+    flex-direction: column;
+  }
+
+  .profile-sidebar {
+    width: 100%;
+  }
+
+  .dashboard-cards {
+    flex-direction: column;
+  }
+
+  .drawer {
+    width: 100%;
+  }
+}
+
+
+
+/* ===== GLASS EFFECT ===== */
+.glass {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+}
+
+/* ===== MUTED TEXT ===== */
+.muted {
+  color: #888;
+  font-size: 14px;
+}
+
+/* ===== PRIMARY BUTTON ===== */
+.primary-btn {
+  margin-top: 10px;
+  background: linear-gradient(45deg, #b48a3c, #d1a84f);
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.primary-btn:hover {
+  transform: scale(1.03);
+}
+
+/* ===== ADDRESS CARD ===== */
+.address-card {
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.address-card:hover {
+  transform: scale(1.01);
+}
+
+/* ===== ACTION BUTTONS ===== */
+.addr-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.addr-actions button {
+  padding: 6px 10px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.addr-actions button:hover {
+  background: #b48a3c;
+}
+
+/* ===== DRAWER ===== */
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 999;
+}
+
+.drawer {
+  width: 420px;
+  height: 100%;
+  background: white;
+  animation: slideIn 0.3s ease;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}

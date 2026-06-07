@@ -1,0 +1,87 @@
+/* =========================
+   GIFTING PAGE GRID
+========================= */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 30px 40px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* =========================
+   PRODUCT CARD
+========================= */
+.product-grid > div {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  text-align: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px;
+
+  /* shadow */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+  transition: all 0.3s ease;
+}
+
+/* hover effect */
+.product-grid > div:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   IMAGE STYLE
+========================= */
+.product-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.5s ease;
+}
+
+/* image zoom on hover */
+.product-grid > div:hover img {
+  transform: scale(1.05);
+}
+
+/* =========================
+   PRODUCT TEXT
+========================= */
+.product-grid h3 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+  font-family: 'Georgia', serif;
+  color: #333;
+}
+
+.product-grid p {
+  font-size: 15px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+  }
+
+  .product-grid img {
+    height: 180px;
+  }
+}

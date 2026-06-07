@@ -1,0 +1,138 @@
+.glass-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 🌄 Background Image */
+  background: url("https://images.unsplash.com/photo-1523275335684-37898b6baf30")
+    no-repeat center center/cover;
+
+  position: relative;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* 🌫 DARK OVERLAY */
+.glass-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(4px);
+}
+
+/* 💎 GLASS CARD */
+.glass-card {
+  position: relative;
+  z-index: 1;
+
+  width: 520px;
+  padding: 28px;
+  border-radius: 20px;
+
+  /* 🔥 GLASS EFFECT */
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  color: white;
+
+  animation: fadeIn 0.5s ease;
+}
+
+.glass-card h2 {
+  margin-bottom: 5px;
+}
+
+.subtext {
+  font-size: 13px;
+  opacity: 0.8;
+  margin-bottom: 15px;
+}
+
+/* FORM */
+.glass-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* INPUTS */
+.glass-form input,
+.glass-form textarea {
+  padding: 10px;
+  border-radius: 10px;
+
+  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.1);
+  color: white;
+
+  outline: none;
+  transition: 0.3s;
+}
+
+.glass-form input::placeholder,
+.glass-form textarea::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+.glass-form input:focus,
+.glass-form textarea:focus {
+  border: 1px solid #6366f1;
+  box-shadow: 0 0 10px rgba(99,102,241,0.6);
+}
+
+/* ROW */
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.row input {
+  flex: 1;
+}
+
+/* BUTTON */
+.glass-form button {
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: white;
+
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.glass-form button:hover {
+  transform: scale(1.05);
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .glass-card {
+    width: 90%;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}

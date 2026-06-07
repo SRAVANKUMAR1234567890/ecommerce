@@ -1,0 +1,33 @@
+body {
+  background: #ffffff;
+  color: #111;
+  transition: all 0.3s ease;
+}
+
+/* 🌙 GLOBAL DARK MODE */
+body.dark-mode {
+  background: #0f0f0f;
+  color: #ffffff;
+}
+
+/* Navbar */
+body.dark-mode .navbar-container {
+  background: #111;
+}
+
+/* Links */
+body.dark-mode .nav-links a {
+  color: white;
+}
+
+/* Dropdown */
+body.dark-mode .dropdown {
+  background: #222;
+  color: white;
+}
+
+/* Cards (if you have products) */
+body.dark-mode .card {
+  background: #1a1a1a;
+  color: white;
+}

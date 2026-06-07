@@ -1,0 +1,17 @@
+.fly-item {
+  position: fixed;
+  font-size: 24px;
+  z-index: 9999;
+  animation: fly 0.8s ease-in-out forwards;
+}
+
+@keyframes fly {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--endX), var(--endY)) scale(0.2);
+    opacity: 0;
+  }
+}

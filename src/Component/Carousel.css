@@ -1,0 +1,126 @@
+
+
+/* ================== CAROUSEL ================== */
+.carousel {
+  position: relative;
+  margin-top: 10px;
+  width: 100%;
+
+  height: 60vh;        /* ✅ clean responsive height */
+  min-height: 300px;
+  max-height: 500px;
+
+  overflow: hidden;
+}
+
+
+
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;   /* ✅ prevents extra spacing */
+}
+
+
+
+/* ================== DARK OVERLAY (for readability) ================== */
+.carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.2); /* slight dark */
+}
+
+/* ================== TEXT CONTENT ================== */
+.content {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  color: white;
+  max-width: 500px;
+  z-index: 2;
+}
+
+/* 🔥 Animation */
+.animate {
+  animation: fadeSlide 1s ease;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.content h4 {
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #ddd;
+}
+
+.content h1 {
+  font-size: 48px;
+  margin: 10px 0;
+}
+
+.content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* ================== BUTTON ================== */
+.content button {
+  padding: 12px 25px;
+  background: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.content button:hover {
+  background: black;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* ================== DOTS ================== */
+.dots {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+
+/* Circle dot */
+.dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  border: 2px solid white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0,255,136,0.6);
+}
+
+/* Circular fill */
+.fill {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
